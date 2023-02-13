@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psedudo Selectors and more desigining</title>
+    <style>
+        /* a:hover anf a:visited is not working here plz check this */
+        .container{
+            border: 2px solid red;
+            background-color: rgb(223, 245, 201);
+            padding: 34px;
+            margin: 34px auto;
+            width: 666px;  
+        }
+
+        a{
+           text-decoration: none;         /*jo underline ead more ke neeche aa raha than link ki wajha se 
+                                          woh hat jaega*/
+           color:black;
+        }
+
+        a:hover{
+            color:green;       /*a:hover ka matlab ki jab aap uspe pointer le kar jaye toh written wali 
+                                  cheez green color ki ho jaegi*/
+            background-color:rgb(164, 240, 213);
+        }
+
+        a:visited{
+        color:purple;         /*button will be shown eith ourple colour if visired once*/
+        }
+
+        a:active{
+            background-color:darkblue;    /*This will show the darkblue colour when we move the curse to button*/
+        }
+
+        .btn{
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-weight:bold;
+            background-color:aqua;
+            padding:6px;
+            border:none;
+            cursor:pointer;          /*when you will click on button it will automatically show the curse */
+            font-size:15px;
+            border-radius:4px;  
+        }
+        .btn:hover{
+            color:darkorange;
+            background-color:yellow;
+            border:2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="cont1">
+        <h3>This is my heading</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
+         provident labore voluptate cupiditate, accusantium, minima facere 
+         dolor consectetur hic repudiandae neque eaque adipisci aut, repellendus 
+         unde ratione fuga voluptas corporis commodi placeat sapiente? At?
+        </p>
+        <a href="https://google.com" class="btn">Read More</a>
+        <button class="btn">contact us</button>
+    
+        
+    </div>
+</body>
+</html>

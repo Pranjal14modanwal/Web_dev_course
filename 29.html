@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive design or size units</title>
+    <!--Responsive design is a way for a web developer to make his website adapt to all the device and resolution-->     -->
+    <!--1. Viewport vs code mein alredy padi hoti hai 
+        2. max-width/max-height can be used to resize aur screen 
+        3. CSS media queries ki madad se hum add on design laga sakte hai hum kuch elemnet mein ki jab screen 
+            resize ho jaegi
+        4. using different types of font units -->
+    <style>
+         html{
+            font-size:25px;
+         }
+
+        .container{
+            font-size: 10px;
+            border:2px solid red;
+            /* width:400px; */
+            /* height:344px; */
+            /* 1. */
+            height:100vh;   /*100vh means ki yh puri height le lega page ki or 100% of view-port height*/
+            width:100wh;    /*100wh means ki yh puri width le lega page ki or 100% of view-port width*/
+            /* view-port width bum jada use nhi karenge kyuki % se bhi humara kam chal jata hai lekin height 
+               set karni hoti hai view-port ke barabar toh vh bahut jada kaam aane wala hai  */
+        }
+
+        h1{
+            text-align: center;
+        }
+
+        #First{
+            /* 2. */
+            font-size: 3em;    /* 3 times parent ka iska parent hai container, if we increase or decrease the
+                                  container size font-size will adjust automatically*/
+            padding:3em;        /*here we assume that paddong will be 30 means 3*fontsize but this is not true
+                                  this will take 3 times of font-size i.e 30*3=90px (check this with compute)*/
+            /* em ko humko tab use karna hai jab hum chahte hai ki kab mera parent elemnt element resize kiya 
+               jaye uske child element usi hisab se resize ho jaye, resizing kaise hogigi ki jaise apne koi
+               element gayab kar diya doc se, yh fir javascript ki madad se apne koi node delete kar diya kisi
+               wesite mein jisme bahut sare nodes the toh agar aap chahte hai ki voh jagha dusare note le le 
+               auer width vagara set ho jaye toh hum iska use karenge */
+            /* but isse aacha hai rem */
+        }
+    
+        #second{
+            /* 3. */
+            font-size:3rem;    /*this will adjust itself according to the root element's font-size i.e html
+                                3*font-size of html i.e 75px;*/
+            padding:3rem;
+            /* em ka use tab karenge jab hum chahte hai ki font-size humara parent par depend kare 
+
+              rem ka use tab kare jab hum chahte hai ki pure ke pure page ka font-size same chahte hai relatively
+              means agar kisi ne apne browser ki default font-size bada li toh apke html ka default size baad jata
+              hai aap chahenge ki uske relative aap scaling karna chahte hai toh aap rem use karenge
+              
+              comprehensive guide to rem and em this is a article in google read it for better understanding */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="First">This is first heading</h1>
+        <h1 id="second">This is second heading</h1>
+        <h1 id="Third">This is third heading</h1>
+    </div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Transitions</title>
+    <style>
+      body{
+        background-color: black;
+      }
+        .box{
+        display: flex;
+        height: 200px;
+        width: 200px;
+        background-color: red;
+        justify-content: center;     /* iska use hum spacing ko barabar karne ke liye use karte hai */
+        align-items: center;           /* this is used to center the element vertically */
+        
+        /*  same as animation properties  */
+        transition-property: background-color;       /*all, height, width, etc....*/
+        transition-duration: 5s;   
+        transition-timing-function:ease-in-out;   
+        transition-delay:2s;   
+        
+         /* plz see the video again for the better understanding of this topic */
+        /* shorthand properties
+        transition: transition-propety transition-duration transition-timing-function transition-delay 
+        EXAMPLE
+        transition: background-color 3s ease-in-out 4s;   */
+     }
+
+     #box:hover{
+        background-color:green;
+        height: 400px;
+        width: 400px;
+        border-radius: 100px;
+        font-size: 45px;
+        /* kon konsi properties transition ho sakti hai voh properties transition ho sakti hai jiski continues 
+           value hoti hai jaise ki colours, margin, height, width, obacity, fontsize etc.. binary propeties
+           mein transition effects nhi milenge*/
+     }
+
+
+    </style>
+</head>
+<body>
+    <h3> This is CSS Transition Tutorial</h3> 
+    <div class="container">
+        <div id="box">
+            This is my box
+        </div>
+    </div>
+</body>
+</html>

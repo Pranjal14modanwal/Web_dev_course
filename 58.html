@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript SetTimeout and Cleartimeout</title>
+</head>
+<body>
+    <div class="container">
+        Time now is <span id="time"></span>
+    </div>
+    <script>
+    console.log("This is tutorial 58");
+    // setTimeout- Allows us to run the function once after the interval of time
+    // clearTimeout- Allows us to run the fuction repeadly after the interval of time
+
+    function greet(name, byeText){
+        console.log("Hello Good Morning" + name + " " + byeText);
+    }
+    setTimeout(greet, 5000, "Harry", "Take Care");          //5000ms = 5sec
+
+    // settimeout(greet(), 12000); -->Wrong as it is calling the function the function inside setTimeout
+
+    timeout = setTimeout(greet, 5000, "Harry", "take care");
+    console.log(timeout)
+
+    clearTimeout(timeout);    //isko use karne se humko 5sec ke baad timeout nhi dikega kyuki maine cleartime out ki help
+                              // se isko clear kar diya hai
+                
+    // this will give you the unique id of set time 
+    // console m unique id 2 ka matlab yh hai ki m iss setoftime of value ko call ko clear kar sakti hu cleartimeout(2) se
+    // agar maine cleartimeout(2) ko pehle run kar diya console mein toh ab settimeout value run nhi hogi
+    // agar aap timeout ko cancel karna chahte hai toh isko use kare
+    // ex-aapki ek website hai aur maine usme user ko time diya 20 sec ka padhne ko voh article aur uske baad signup karne 
+    // ka option aaye but user ne pehle hi sign up kar diya toh fir apka settime wala timmer bekar ho gaya na agar user ne 
+    // 20sec ke pehle hi signup kar diya aur signup ke baad usko message a raha hai signup karne ka toh voh confusing hoga
+    // user ki signup kar toh diya ab kaise kru signup isse baachne ke liye toh isse bachne ke liye jab signup karwa rahe
+    //  hai toh signup form fill karwane ke saath saath clear timeout de sakte hai   
+
+    setInterval(greet, 1000, "Harry", "good night");    //har ek sec mein message print hoga
+
+    // IntervalId = setInterval(greet, 1000, "Harry", "good Night");
+    // clearInterval(intervalId);
+
+    function displayTime(){
+        time = new Date();
+        console.log(time);
+        document.getElementById('time').innerHTML = time;
+    }
+
+    setInterval(displayTime, 1000);       //har ek sec m agar hum chahe ki time update ho jaye 
+    </script>
+
+</body>
+</html>

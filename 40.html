@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Tutorial</title>
+    <style>
+     .container{
+        display:grid;    /* grid is used to make the layout of the page */
+
+        grid-template-columns: 300px 100px 100px;       
+        /* grid-template-columns:300px auto 100px;     300px auto 100px, 300px 100px auto (auto means here 
+                                                           ki woh beech ki sari space le lega) */
+        /* grid-template-columns: 1fr 4fr 1fr;     (This means that ki puri width ka 1 part 1st column ko de do
+                                                  4 part 2nd  aur 1 part 3rd column ko de do) */
+        grid-template-columns: repeat(3, auto);     /* (this is used to repeat the times and size) */
+
+        grid-gap:2rem; 
+     }
+
+     .item{
+        background-color: red;
+        border: 2px solid black;
+        margin:3px;
+        padding:15px 5px;
+     }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- jaise hi humne container ko grid kiya waise hi container ek grid ban gaya aur isme jitne bhi item
+            the item1 to item10 tak voh grid items ban gaye sare item -->
+        <div class="item">This is Item-1</div>           <!-- div.item{This is Item-$}*9 -->
+        <div class="item">This is Item-2</div>
+        <div class="item">This is Item-3</div>
+        <div class="item">This is Item-4</div>
+        <div class="item">This is Item-5</div>
+        <div class="item">This is Item-6</div>
+        <div class="item">This is Item-7</div>
+        <div class="item">This is Item-8</div>
+        <div class="item">This is Item-9</div>
+        <div class="item">This is Item-10</div>
+    </div>
+</body>
+</html>

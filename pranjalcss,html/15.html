@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS selectors</title>
+    <style>
+     /* p{  
+        color:red;
+     } 
+     this is used if we want to able the thing to the whole para */
+
+    /* element selctor    (used only when you what that thing in only one element) */
+    p{
+        border:2px solid red;
+    }
+
+    /* id selctor used for specfic line */
+    /* ek element      (ki ek id unique hoti h woh uska identifier hota hai) */
+    #firstpara{
+        color: purple;
+    }
+
+    /* class selector   (ek class multiple element ja sakti h aur ek class mein multiple class bhi aa sakti hai) */
+    .bgblue{
+        color:yellow;
+        background-color:blue;
+    } 
+
+    /* grouping selctor */
+    footer, span{
+    background-color: pink;
+    }
+
+    </style>
+</head>
+<body>
+    
+<h3>CSS Selectors</h3>
+<p id="firstpara">this is a simple paragraph to demostrate css selcetors</p>
+<p id="secondpara" class="redelement bgblue">this is a another simple paragraph to demostrate css selectors</p>
+<div>
+    <p>
+        this is yet another simple paragraph insude div to demostrate css selectors
+        <!-- in this case also you will all the 3 sentences as red -->
+    </p>
+</div>  
+<footer>this is footer</footer>
+<span>this is span</span>
+
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Flexbox Tutorial</title>
+    <style>
+       .container{
+          height:544px;
+          width:100%;
+          border: 2px solid black;
+          display:flex;    /*(boxes column wise adjust ho jaenge means ek line mein horizontally na ki
+                               vertically)   or initialise the cpontainer as flex box*/
+          flex-direction: row;
+          /* 1- flex-direction: row;   (by default row wise rehta h) */
+          /* flex-direction: column;   (column wise ho jaega) */
+          /* flex-direction: row-reverse;  (row-wise right side fill hona suru hoga) */
+          /* flex-direction: coloumn-reverse;  (column-wise ulta fill hoga) */
+
+          flex-wrap:wrap;     /*flex wrap karne se chota karne par wrap ho jaega */
+          /* 2-flex-wrap:wrap-reverse;     is used to wrap the element or boxes in reverse order*/
+          /*default value of flex-wrap is no wrap*/
+
+          /*3-*/
+          flex-flow:row-revrse wrap;     /*with this we can select direction and wrap both in a single code
+                                           line. this is the shorthand*/
+          /*4- Justify-content will justify the content in vertical direction*/
+          /* justify-content: center;         */
+          /* justify-content: space-between;    this means har box ke beech mein same space kar do par side m maat space do */
+          /* justify-content: space-evenly;     this means har jagha barabar space de do including both sides */
+          /* justify-content: space-around;     kiski bhi ek box ke left aur right mein barabar space kar do 
+                                                that's why beech wale mein jada gap dikhai dega*/
+            
+           /*5*/
+           /* align-items:center; */
+           /* align-items: flex-end;              aisa karne se neeche aa jaenge sare boxes */
+           /* align-items: flex-start;            aisa karne se upar aa jaega aur yh by defaulkt hota hai */
+           /* align-items: stretch;               isne evenly gap bana li boxes le beech m */
+        }
+
+    .item{
+        background-color: tomato;
+        border:2px solid green;
+        margin: 10px;
+        padding:3px;
+        height:100px;
+        width:100px;
+    }
+ /* flex-grow and flex-shrink ka use hum log individual item pe karenge */
+    #item-1{
+        /*6*/
+        /*item properties for a flex item*/
+        /* Higher the order, later it shows up in the container*/
+        /* order:2; */
+        
+        /*7*/
+        /* flex-grow:3;      that means it will take the more space with respect to the other boxs jab bada karenge */
+        flex-shrink:3;       /*that means it will shrink when space is decreased. so instesd of negative value we
+                             can use this property jiski value jada hogo vph jada shrink hoga */
+       }
+
+    #item-2{
+       /* flex-grow: 2;      kyuki item-1 mein flex-grow ki value jaga hai isliye woh jada space lega bada 
+                             karne par. Negative number is invalid here*/
+       /* flex-shrink: 3; */
+       /* 8 */
+       flex-basis:160px;   /*when flex-direction is set to row flex-basis: will control width*/
+                           /* when flex-direction is set to column flex-basis: will control height*/
+    }
+
+    #item-3{
+     /*order:40     becasue the order of box 3 is more then box first hence it will appear at the last */
+     /* 9 */
+     flex: 2 2 344px;     /*flex:flex-grow flex-shrink flex-basis these three can be written in one line*/
+     /* 10 */
+     align-self: flex-start;    /*this is used to put the box at the start or at the upside*/
+     align-self: flex-end;      /*this is used to put the box at the end or at the down side*/
+     align-self: center;        /*this is used to put the box at the center*/
+    }
+
+    </style>
+</head>
+<body>
+     <h1> This is Flexbox Tutorial</h1>  
+     <div class="container">
+    <div class="item" id="item-1">First Box</div>           <!-- div.item#item-$*6 this is a block element-->
+    <div class="item" id="item-2">Second Box</div>
+    <div class="item" id="item-3">Third Box</div>
+    <div class="item" id="item-4">Fourth Box</div>
+    <div class="item" id="item-5">Fifth Box</div>
+    <div class="item" id="item-6">Sixth Box</div>
+
+     </div>
+</body>
+</html>

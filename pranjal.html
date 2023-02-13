@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="discription" content="this is discription">
+    <meta name="robots" content="html,html tutorial,web development">
+    <meta name="robots" content="INDEX, FOLLOW">
+    <title>Document</title>
+    
+    <!--this is how you include external follow css-->
+    <link rel="stylesheet" href="harry.css">
+
+<!--this is how you include external javascript-->
+<script src="harry.js"></script>
+
+</head>
+<body>
+    This is my first web page......
+    <h1>medha</h1>
+    <h2>medha</h2>
+    <h3>medha</h3>
+    <h4>medha</h4>
+    <h5>medha</h5>
+    <h6>medha</h6>
+
+    <ul>
+        <li>samosa
+            <li>pizza
+                <li>burger</li>
+            </li>
+        </li>
+    </ul>
+
+    <ol>
+        <li>love
+            <li>hate
+                <li>happiness
+                    <li>sadness
+                    <li>peace </li>
+                    </li>
+                </li>
+            </li>
+        </li>
+    </ol>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>name</th>
+            <th>employee id</th>
+            <th>employee role</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>harry</td>
+             <td>34343</td>
+             <td>prorgrammer </td>
+        </tr>
+
+        <tr>
+            <td>rohan das</td>
+            <td>3426</td>
+            <td>HTML Expert</td>
+        </tr>
+    
+        <tr>
+             <td>shubhas</td>
+             <td>4546</td>
+             <td> android developer</td>
+             <td></td>
+        </tr>
+    </tbody>
+</table>
+
+<p>
+    medha is a <strong>very beautiful</strong> and <em>smart child.</em><br>
+    I <b>hate her</b> and <i>purple her</i>.<br>
+
+<a href="https://google.com" target="blank">Go to google</a><br>
+<a href="http://facebook.com" target="blank">Go to facebook</a><br>
+<a href="http://twitter.com" target="blank">Go to twitter</a><br>
+<a href="http://linkedin.co," target="blank">Go to linkedin</a><br>
+<!--target="blank" is used for opening a link at new tab-->
+
+<a href="/pranjal.css">   </a>
+</p>
+
+<h2>Form creation</h2>
+<form action="backend.php">
+<div>
+    <label for="name">Name</label>
+     <input type="text" name="myname"  id="name">
+     <!-- input tag is inline element means ek hi line mein aaega aur div block element hai
+         mean yh pura block occupy karega aur agle wale element ko neeche jana padega -->
+         <!--Content select karne ke saath alt+downward arrow ke dabaenge toh selected item neeche move karega  -->
+</div>
+<br>
+<div>
+    <label for="role">Role</label>
+    <input type="text" name="myrole"  id="role">
+    <!-- label mein jo likenge woh webpage mein show hoga, name mein voh naam dalte hai jo ki backend mein
+         show hoga jab data liya jaega, aur id mein hum log voh sam echeez dalte hai jo ki humne label mein 
+         dala hai n
+         label use karne ki wajha se jab aap website pe ja kar role yh name pe click karoge toh apne aap hi 
+         box select ho jaega aur blue colour se outline ho jaega iske liye apko box pe click karne ki zarrorat 
+         nhi hai-->
+</div>
+<br>
+<div>
+    Email: <input type="email" name="myemail">
+</div>
+<br>
+<div>
+    <input type="date" name="mydate">
+</div>
+<br>
+<div>
+    bonus: <input type="number" name="mybonus">
+</div>
+<br>
+<div>
+    Are you elidgible: <input type="checkbox" name="myeligibility"  checked>
+</div>
+<br>
+<div>
+    Gender: Male <input type="radio"  name="mygender">   female <input type="radio" name="mygender">
+    others <input type="radio" name="mygender">
+</div>
+<br>
+<div>
+    <input type="submit" value="submit now">
+<input type="reset" value="Reset now">
+</div>
+<div>
+write about yourself:<br><textarea name="mytext" cols="90" rows="10"></textarea>
+</div>
+<br>
+<div>
+   <label for="car">car</label>
+   <select name="mycar" id="car">
+       <option value="ind" selected>Indica </option>
+       <option value="swf">swift</option>
+   </select>
+</div>
+<br>
+</form>
+
+<h2>Inline and block element</h2>
+<strong style="border: 2px solid red;"> this is a paragraph</strong><p style="border: 2px solid blue;">
+this is also a paragraph</p>
+<span style="border: 2px solid red;">this is a span</span>  <span style="border:2px solid red;">this is also a span</span>
+<br>
+<h3>use of a attribute</h3>
+
+<strong style="border: 2px solid red;">this is a paragraph</strong><a style="border: 2px solid blue;">
+this is also a paragraph</a>
+<span style="border:2px solid red";>this is a span</span>  <span style="border :2px solid red;"> this is also a span </span> 
+
+<h5>"li" and "div" is a block element </h5>
+<h5>"em" and "img" is a inline element </h5>
+
+<br>
+<h3> Ids and classes tutorial</h3>
+<div id="mainbox" class="redbg">
+<h6>ek id sirf ek element ko di ja sakti hai but class ke saath aisa nhi hai. class ko multiple element mei laga sakte hai</h6>
+<!-- select and press ctrt + / to comment -->
+<!-- emmet-->
+<!-- here . is for class and # is for id-->
+<!--span.redbg then press enter and below code will type automatically-->
+ <span class="redbg"></span>
+ <!--span#mainspan then press enter and below code will type automatically-->
+<span id="mainspan"></span>
+<!-- div.redbg.blackborder.anotherclass press enter -->
+<div class="redbg blackborder anotherclass"></div>
+<!-- .blackbackground and press enter then it will automatically giv div to you-->
+<!-- emmet takes div tag as default-->
+<br>
+<!--span.myclass.myclass2.myclass3*4 + <tab> to print 4 similar elements using emmet-->
+    <span class="myclass myclass2 myclass3">first</span>
+    <span class="myclass myclass2 myclass3">second</span>
+    <span class="myclass myclass2 myclass3">third</span>
+    <span class="myclass myclass2 myclass3">fourth</span>
+<!--agar hum kisi ko naam dete hi toh voh id hoti hai, id means identifier, id di jati hai so that hum
+    hum usko pehchan sakte aur uniqly identify kar sake
+    class is used to give the same data to the bulk, 100 jagha same cheez dene se aacha hai ki ek class bana lo
+    hum log space de kar mutiple class bana sake hai aur woh same same property lenge-->
+    
+<h3>HTML ENTITIES</h3>
+<div class="container">
+    <p>this is a paragraph</p>
+</div>
+<div class="container">
+    <p>This is another &nbsp; &nbsp; paragraph with two spaces</p>
+    <!--&nbsp (means non breaking spacing) is used for spacing -->
+    
+    <p>paragraph is written like this &lt;p&gt;</p>
+    <!--&lt;p&gt is used to write <p> beacuse this cannot be showen in website and considered as tag-->
+        
+        <p>pound is written like this &pound;</p>
+        <p>copyright is written like this &copy;</p>
+        <!--html entites is used to write symboles of pound,copywrite,dollar etc.. which is not present in keyboard
+        many other entities can be search in google by typing html entites refernce and we can see the list of different entities-->
+    
+<p>empty character is written like this &#8203; </p>
+
+<!--END OF HTML TUTORIAL-->
+    </div>
+
+
+    <h1>sementic elements</h1>
+    <!-- semantic ka matlab hota hai ek word ko meaning dena 
+        examples such as footer,header,main, mark,nav, summary, section, details etc.... jaise header top rahega 
+        humesha, footer neeche rahega, nav matlab navigation 
+        non-sementic elements are div,span yh batate ni ki inka kya kaam hai website mein -->
+<details>
+    <summary>
+        I have keys but no doors. I have space but no room. You can enter but you can't leave. what I am? 
+    </summary>
+    A keyboard
+</details>
+<!---It is the only work of detail tag so if we remove the summary tag it will work as it is.
+summary ke andar jo cheez hogi woh as it is show hog aur jo detail tag ke ander hogi usko humlog collapse kar sakte hai-->
+
+
+</body>
+</html>

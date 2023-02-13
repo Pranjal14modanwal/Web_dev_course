@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variables/ Customs Properties</title>
+    <style>
+        :root{
+            --primary-color:blue;  /* root is used to generate the global variable */
+            --danger-color: red;
+            --maxw: 333px;
+        }
+
+       .box{
+        --box-color:violet;       /* this is used to use the same colour at different place by defining it at 
+                                    one place , benefit of using this is that we can change the color here and 
+                                    it get chamge evryehere automatically where we have used it */
+        width:200px;
+        height:200px;
+        background-color: var(--primary-color);     /* with the use of var(--box-color) we can get the same color 
+                                                      here also, here we define it locally */
+                                                
+        border:2px solid var(--danger-color);
+        box-shadow:3px 3px var(--box-color);
+        margin:2px 9px;
+       }
+
+       .container{ 
+        /* --box-color:violet;     to use this property here we should again define the properly we define it locally */
+        display:flex;
+        align-items:center;
+        justify-content: center;
+        background-color: var(--box-color);
+        max-width: var(--maxw);
+        margin: auto;
+        background-color: var(--danger-color);
+        /* kyuki maine container ki width ko hi kam kar diya tha isliye maine margin auto lagaya isko center karne 
+           ke liye warna yh right hand side mei chala jaega. kyuki container hi itna chota ho gaya hai toh isme
+           agar mai display flex bhi karta hu toh ander hi andar item center honge pehle kya tha container khud hi 
+           bada tha aur usne puri jagha li thi toh agar center karte toh 3 box center mein aa jate sirf lekin 
+           agar width hi kam kar di margin auto kar le center karna padega humko*/
+       }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</body>
+</html>

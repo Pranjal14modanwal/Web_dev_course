@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Display Property</title>
+    <style>
+        header{
+            border:2px solid red;
+            width:15%;
+            margin:auto;
+            /* margin="auto"  margin auto karne par bhi middle mein nhi aaya  */
+            /* header is a block element */
+            /* display block ka matlab hai ki voh puri line le kar baith jaega, display inline ka matlab hai ki
+                bs uthni jalgha lega (but inline use karne ke baad bahut ajeeb sa look mil raha tha reason is 
+                because header ke ander ek block element hai) */
+            /* agar iske ander jo block elemnt hai usko bhi display inline kar du toh woh written content
+            overflow hone lagega*/
+            /* kyuki header ek block element hai toh uski hum log width set kar sakte hai % aur px both can be 
+            used width isliye hi set ho pa rahi hai kyuki yh ek block element hai */
+            /* agar header mein se width ko hata denge toh bhi koi problem nhi hogi kyuki humne iske ander ke 
+            element ko bhi center kar diya hai */
+        }
+        img{
+            width:34px;
+            display:block;
+            margin:auto;
+            /* image ki display inline hoti hai toh usko change kar ke block karenge */
+            /* there is a feature called responsive design icon present at the second left side of the navigation
+                shown in inspect (from there we can change the side of the overall page)*/
+            
+        }
+        h3{
+            text-align:center;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin:0px;   /*because margin alreay added thi*/
+
+        }
+      .box{
+        border:2px solid black;
+        background-color: lightgray;
+        margin: 4px 0px;
+        padding: 23px;
+        width: 33%;
+        box-sizing: border-box;
+        display:inline-block;   /*beacuse hum chahte hai ki box container ke ander aa jaye*/
+        /* agra yaha display ko inline kar de toh problem aaegi kyuki iske ander kuch block element hai */
+        /* agar display b,ock kar de width let suppose 30% de de toh content 30% screen mein aaega aur puri
+           jagha lega but next content neeche aaega */
+        /* aur agra hum chate hai ki inline bhi rahe aur iski width bhi set ho jaye toh display: inline block
+           likh de but abhi bhi yh problem aaegi ki teeno block ek line mein nhi aaege beacuse box sizing 
+           border box nhi ki hai hai */
+        /* border box karne se kya hota hai ki jo apki total width hoti hai voh jitni rehti hai utni rehti hai
+           including margin aur padding otherwise margin aur padding apki width ko change kar dengi */
+      }  
+
+      .container{
+        margin:auto;
+        width:1200px;
+      }
+    </style>
+</head>
+<body>
+     <header class="top">
+        <img src="https://codewithharry.com/static/common/img/photo.png" alt="">   <!--this is inline element-->
+     <h3>Welcome to my Harry's blog</h3>            <!--this is block element-->
+     
+     </header>
+     <div class="container">
+        <div class="box">
+               <h4 class="heading">Heading</h4>
+               <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta perferendis qui esse accusantium 
+                voluptate, neque eos inventore illum culpa! Recusandae maxime rem quis iusto nesciunt quas 
+                debitis eligendi suscipit doloremque aliquid, dolorem aliquam nemo.</p>
+        </div>
+
+        <div class="box">
+            <h4 class="heading">Heading</h4>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta perferendis qui esse accusantium 
+             voluptate, neque eos inventore illum culpa! Recusandae maxime rem quis iusto nesciunt quas 
+             debitis eligendi suscipit doloremque aliquid, dolorem aliquam nemo.</p>
+     </div>
+
+     <div class="box">
+        <h4 class="heading">Heading</h4>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta perferendis qui esse accusantium 
+         voluptate, neque eos inventore illum culpa! Recusandae maxime rem quis iusto nesciunt quas 
+         debitis eligendi suscipit doloremque aliquid, dolorem aliquam nemo.</p>
+     </div>
+     </div>
+</body>
+</html>
+
+
+<!-- something is wrong with the image and conent written below kindly check this -->
+

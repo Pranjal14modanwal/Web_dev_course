@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alignment</title>
+    <style>
+        /* please see this video again for better understandig of this topic */
+*{
+box-sizing:borderbox;
+}
+body{
+    font-family: 'ubantu', sans-serif;
+}
+
+.container{ 
+       width: 900px;
+       border: 3px solid purple;
+       background-color: rgb(231, 168, 114);
+       margin:auto;  /*it gives same space from right and left side and container comes at center with the use of auto
+                      aur we can give in px  ex-33px */
+ } 
+
+.item{
+    border: 3px solid grey;
+    margin: 12px 3px;
+    padding:12px 3px;
+    background: rgb(238, 208, 204);
+}
+
+#fruit{
+       float:right;
+       width:48%;
+}
+
+#computer{ 
+    float:left;   /*if we write clear:both that means ki koi overlap nhi karega na left wala na right wala*/
+    width:48%;
+}
+
+#stationary{
+    float:both;  /*clear left means jo bhi float left hai woh mujhe tang na kare or float left element mere
+                   upar na aaye  par isko likhne se left wala toh overlap nhi hoga but right wala hoga  */
+    width:48%;
+} 
+
+p, h3{
+    text-align: justify;
+
+    /* text-align:left; (text-align over write ho jaega at right kyuki jo baad m likha hota hai voh implement hota h*/
+}
+h1{
+    margin: 23px auto;
+    width: 455px;
+}
+    </style>
+</head>
+<body>
+    <div class="container">  <!--.continer is the shortcut for this statement-->
+        <h1>Welcome to my store</h1>
+       <div id="fruit" class="item">    <!--#fruit.item and press enter-->
+           <h3>Fruits</h3>
+           <p id="fruitpara" class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt soluta numquam
+            quae officiis! Earum laborum voluptate quo sunt dolorem, quod impedit necessitatibus possimus enim
+            eos.</p>     <!--p#fruitspara.para-->
+        </div>
+
+
+        <div id="computer" class="item">    
+            <h3>Computers</h3>
+            <p id="computerspara" class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae 
+                dignissimos similique ullam quae quaerat facilis voluptates ea ipsa est culpa.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, eligendi. Ex in 
+                itaque laborum quisquam deleniti, dignissimos neque maiores dolore.</p>     
+        </div>
+
+
+        <div id="Stationary" class="item">    
+            <h3>stationary</h3>
+            <p id="Statinarypara" class="para">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae sunt
+                vitae tenetur soluta magnam quasi modi libero praesentium voluptatum alias.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia quisquam esse consequuntur
+                rerum enim fugiat doloribus repellendus praesentium sunt ea?</p>     
+         </div>
+
+         <div id="Glasses" class="item">    
+            <h3>stationary</h3>
+            <p id="Glassespara" class="para">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae sunt
+                vitae tenetur soluta magnam quasi modi libero praesentium voluptatum alias.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia quisquam esse consequuntur
+                rerum enim fugiat doloribus repellendus praesentium sunt ea?</p>     
+         </div>
+    </div> 
+
+
+</body>
+</html>

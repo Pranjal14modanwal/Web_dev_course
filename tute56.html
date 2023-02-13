@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulating DOM</title>
+</head>
+<body>
+    <!-- id se element ko grap karne ka tareeka -->
+    <div id="main" class="container">
+        <ul id="nav">
+            <li>Home</li>
+            <li>About</li>
+            <li>Services</li>
+            <li>More About Us</li>
+            <li>Contact Us</li>
+        </ul>
+    </div>
+    <div class="container">
+        Another Container
+    </div>
+    <script>
+       let main = document.getElmentById('main');
+       console.log(main);
+       let nav = document.getElementById('nav');
+       console.log(nav);
+       //plz check why this is not working
+
+    //if we write nav.innerHTML in console then it will give the html in string form 
+
+    // nav.innerHTML = "<li>Dynamic element</li>"
+    // result will be <li>Dynamic element</li>
+    // so with the use of this we can change the index
+
+
+    // class se element ko grap kar sakte hai
+    //  (hum ek element ko multiple classes de skate ho aur ek class ko multiple element mein de sakte ho)
+    let containers = document.getElementsByClassName('container');
+    console.log(containers)
+    // this will give you the collection of all html container
+
+    // containers[0]   (This will give you the 1st sontainer and same uou can access the other)
+
+    // a-) CSS selector for first element
+    // let sel = document.querySelector('.container');    /* this will return the first element which will match
+    //                                                      the selector    Ex-'#nav' or '#nav>li'*/
+    // console.log("Selector returns", sel)
+
+
+    // b-) CSS selector for all elements
+    let sel = document.querySelectorAll('.container');
+    console.log("Selector returns", sel)
+
+    // if we write this in console screen then 
+    sel[0].innerHTML = "Inserted"
+    "Inserted"
+    sel[0].innerHTML = "Inserted2"
+    "Inserted2"
+    sel[0].innerHTML = "Inserted3"
+    "Inserted3"         /*it get the inserted*/
+    sel[0].innerHTML
+    "Inserted3"         /*this will give you the recent inserted value*/
+
+// plz check there is some error
+    </script>
+</body>
+</html>

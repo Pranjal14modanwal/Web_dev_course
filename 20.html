@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model</title>
+    <style>
+        *{
+          box-sizing: border-box;
+          margin:0;
+          padding:0;  /* this is a universal selector */
+        }
+        .container{
+            background-color: burlywood;
+            border: 3px solid rgb(223, 128, 226);
+
+            /* we can set margin/padding for top,bottom,left and right like this 
+            padding:9px;
+            padding-top:79px;
+            padding-bottom:70px;
+            padding-left:34px;
+            padding-right:79px; 
+
+            margin-top:3px;
+            margin-bottom:5px;
+            margin-left:34px;
+            margin-right:5px; */
+
+            /* margin= top right bottom left;
+               padding= top right bottom left; */
+
+            /* padding: 23px 56px 6px  78px
+               margin:  23px 56px 6px  78px */
+
+            /*padding: 23px  56px  6px  78px;  padding/margin a top right bottom left*/
+            /* padding: 34px 19px;              /*padding: y(top/bottom) x(left/right);  agar aap top aur
+                                                  bottom ki aur left aur -right ki same dena chahte hai toh 
+                                                  aise likh sakte hai*/                        
+
+            margin:34px 19px;
+            /* padding ki wajha se apka content ander hi ander simat jaega */
+            margin:14px 19px;
+            width:533px;
+            box-sizing: border-box; /*agar hum border-box ko nhi use karte hai toh agar hum padding mein 
+                                      changes karte hai toh container ki width bhi change hogi but aisa nhi
+                                      hona chahiye kyuki humne toh widht already set kar rakhi hai
+                                      actual width=marging+padding is also added
+                                      to avoid this case we will use border-box*/
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3>This is my heading</h3>
+        <p id="first">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+        Aspernatur deleniti veniam non magni nulla labore perferendis voluptas optio, quam reiciendis?</p>
+    </div>
+
+    <div class="container">
+        <h3>This is my heading</h3>
+        <p id="seconf">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+        Aspernatur deleniti veniam non magni nulla labore perferendis voluptas optio, quam reiciendis?</p>
+    </div>
+
+    <div class="container">
+        <h3>This is my heading</h3>
+        <p id="third">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+        Aspernatur deleniti veniam non magni nulla labore perferendis voluptas optio, quam reiciendis?</p>
+    </div>
+</body>
+</html>

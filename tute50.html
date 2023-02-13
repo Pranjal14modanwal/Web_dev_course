@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript String Functions</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    
+    <script>
+        var str = "This is a string";
+        console.log(str);
+
+        // First occurance of a substring
+        var position = str.indexOf('is');
+        console.log(position)   /* this will give the result 2 becuase we get the first occurance of substring
+                                  that is at index 2 (indexing starts from 0) */
+ 
+        // Last occurance of a substring
+        position = str.lastIndexOf('is');
+        console.log(position)
+
+        // substring from a string [method-1]
+        var substr = str.slice(1,6);   /* yh 1 se le kar 5 index tak pront karega matlab ek kam
+                                        (slice can take negative values as well) */
+        console.log(substr)
+
+        // [method-2]   this will not take negative values
+        var substr = str.substring(1,7);
+        console.log(substr)
+
+        // [method-3]
+        var substr1 = str.substr(1,7);   /* index 1 se index 7 tak print karega*/
+        console.log(substr1)
+
+        // replacing a  string
+        var replaced = str.replace('string','harry');
+        console.log(str)
+        console.log(replaced)     /*this will replace string with harry*/
+        /* isse meri pehli wali string change nhi hogi balki jo humne replaced naam ki string bano hai woh change 
+           hogi sirf */
+
+        // To print the string in uppar case
+        console.log(str.toUpperCase());
+
+        // To print the string in lower case
+        console.log(str.toLocaleLowerCase());
+
+        // To concat or add(+) the string
+        var newstring = str.concat('New String')
+        console.log(newstring)
+
+        // To trim the spaces 
+        var strwithwhitespace = "    this contains        whitespace   ";
+        console.log(strwithwhitespace)
+        console.log(strwithwhitespace.trim())    /*this trims the whitespace of string from starting and ending*/
+
+        // How to extract characters from a string
+        var char2 = str.charAt(2);
+        console.log(char2)    
+
+        // this will give you the  character code of the charcter which is there (UTF16 character code)
+        var char2 = str.charCodeAt(2);
+        console.log(char2)
+
+        // slicing of string
+        console.log(str[3])
+    </script>
+</body>
+</html>

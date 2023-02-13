@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Shadow and Text Shadhow</title>
+    <style>
+        .container{
+            display: flex;
+        }
+        .card{
+            padding: 23px 12px;
+            /* border: 2px solid red; */
+            margin:23px 12px;
+            background-color: burlywood;
+            /* 1. */
+            box-shadow: 10px 13px green;  /*This is used to give shadow and shadow colour default color of
+                                               the shadow is black this will show the shadow down wards
+            box-shadow: -10px -13px greenyellow;  /*This is used to give the shadow at the uppar side*/
+
+            /* 2. */
+            box-shadow: 10px 13px 15px red;    /* 15px is used to give the blur shadow at the bottom*/
+            /*box-shadow: -10px -13px 15px red;     15px is used to give the blur shadow at the top*/
+ 
+            /* 3. */
+            box-shadow: -7px -5px 10px 34px green;   /*Here 34px is used to spread the colour at all four side*/
+       
+            /* 4. */
+            box-shadow: -7px -5px 10px 34px rgba(17, 172, 172, 0.5);   /*0.5 yh show karega ki kitna halka 
+                                                                           colour ho*/
+
+           /* 5. */
+           box-shadow: inset 3px 5px green;      /*inset is used to insert the shadow inside the box*/ 
+           
+           /* 6. */
+           box-shadow: 3px 5px green, 4px 6px red;     /*for appling mutiple shadows */
+
+        }
+
+        .card h2{
+    /* text-shadow:3px 4px white; */
+    text-shadow:3px 4px 2px white;   /*2px is used for blur*/
+    /* text shadow tab use karenge kaise ki koi text hai voh kam dikh raha hai toh text shadow ki use 
+       se voh properly dikhne lagaga yh jiase kabhi kabhi box colour aur background colour same ho jata hai
+       toh usse case mein use kar sakte hai text ki visibility badane ke liye*/
+       text-shadow:-3px -4px 2px white;   /*this is used to give the text effect at the above of the text*/
+}
+    </style>
+</head>
+<body>
+   <div class="container">
+      <div class="card" id="card1">
+       <h2> This is C++ course </h2>
+       <p>I started C++ course which doesnot mean that we will stop this course we will continue this course too
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed eaque magni neque laboriosam itaque tenetur
+        consequatur similique adipisci, earum aperiam necessitatibus repellendus odio ea iure aspernatur cum. 
+        Veritatis, ducimus odit error aperiam cupiditate ab?</p>
+        </div>
+
+      <div class="card" id="card2">
+      <h2>This is HTML course </h2>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos tenetur obcaecati ducimus natus, accusamus
+         ratione quas quidem est asperiores veniam optio alias deserunt ipsam libero facere ipsa illum, ex 
+         iure cumque animi repudiandae excepturi!</p>
+    </div>
+
+      <div class="card" id="card3">
+        <h2> Card3 </h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius voluptate perferendis inventore. Repellat, 
+            debitis esse sed perspiciatis suscipit ad officiis blanditiis aut ab dolor nisi vitae dolore 
+            tempora quasi accusantium maiores aspernatur optio deleniti!
+        </p>
+    </div>
+   </div> 
+</body>
+</html>

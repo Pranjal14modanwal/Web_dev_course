@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position :Absolute, sticky, relative, static ,fixed</title>
+    <style>
+        /* CSS Position: static(default), absolute, relative, fixed, sticky */
+       
+       .container{
+        border:2px solid black;
+        background-color: khaki;
+        height:3444px;
+       }
+       
+        .box{
+            display:inline-block;
+            border: 2px solid red;
+            width:150px;
+            height:150px;
+            margin:2px;
+        }
+
+        #box3{
+           /*1- position:absolute;
+            top:34px;
+            left:34px;
+            absolute ka matlab hai relative to their parent i.e container, iss tarh se aap box ko move karwa
+            paenge */
+
+
+            /*2- position:relative karne se aap top, bottom, left, right properties use kar sakte ho
+             (relative means realtive to their noremal postion*/
+            /*top:34px;
+              left:34px;
+              aisa karne se apki purani postion pe gap aa jaega, toh agar gap chahiye toh relative 
+              use karenge agar nhi chahiye toh absolute use karenge*/
+
+             /*3- position:fixed;     (hum log position fixed kar dete hai block ki foxed position tab 
+                                       dekhne ko milegi jab container ka size bada hoga)
+             right:4px;
+             bottom:2px;*/
+
+             position:sticky;           /*box 3 stick rahega scroll karne par bhi*/
+             top:3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div class="box" id="box1">1</div>     <!-- div.box#box*4-->
+    <div class="box" id="box2">2</div>
+    <div class="box" id="box3">chat with us</div>
+    <div class="box" id="box4">4</div>
+    </div>
+</body>
+</html>
+
+<!-- Search web design in google to see the different samples of website and we can learn to make the website
+ and also check the code from inpect-->

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Before and After pseudo Selector</title>
+    <style>
+     body{
+         background-color: black;
+         color:white;
+         margin:0px;
+         padding:0px;
+         background:url('https://source.unsplash.com/collection/190727/1600*900') no-repeat center center/cover;
+         /*please copy this url from unsplash website so that it work here */
+    }
+
+    header::before{
+        content: "";
+        position: absolute;
+        top:0;    /*space khatam karne ke use kiya gaya hai*/
+        left:0;   /*spave khatam karne ke liye use kiya gaya hai*/
+        width:100%;
+        height:100%;
+        z-index:-1;  /*this is used here so that text can be visibe because earlier it get covered with image*/
+        opacity: 0.4;  /*this is used to light the page so that content get visible easily*/
+    }
+
+    header{
+        display: flex;
+        flex-direction:column;
+    }
+
+    .navigation{
+        font-size: 20px;
+         display:flex;
+    }
+
+    li{
+       list-style: none;
+       padding: 20px 23px;
+    }
+
+    section{
+        height: 344px;
+        margin: 3px 230px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;        
+        justify-content: center;     /*overall content center ho jaega*/
+    }
+
+    h1{
+        font-size: 4rem;
+    }
+
+    p{
+        text-align: center;
+    }
+
+    /* 1. */
+    /* section::before{                 (this content will show before section)
+        content: "This is a content";
+    }
+
+    section::after{                 (this content will show after section)
+        content: "This is a content";
+    } */
+
+    /* Unsplash Source is a website which have a collection of background, images and wallpapers randomly */
+    
+    
+
+
+
+    </style>
+</head>
+<body>
+<header>
+    <nav class="navbar">
+        <ul class="navigation">
+            <li class="item">Home </li>
+            <li class="item">About</li>
+            <li class="item">Services</li>
+            <li class="item">Contact Us</li>
+        </ul>
+    </nav>
+</header>
+    <section>
+        <h1>Welcome to coding World</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto sed doloremque labore, adipisci 
+            quibusdam, nihil necessitatibus praesentium voluptas impedit ea, deserunt repellendus obcaecati 
+            culpa numquam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, dicta. Id, 
+            laboriosam beatae quo error ullam doloremque vitae, debitis non dolore ratione obcaecati magni 
+            labore dicta facere harum culpa quasi.</p>
+    </section>
+    <hr>
+</body>
+</html>

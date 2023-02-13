@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries</title>
+    <style>
+     .box{
+        font-size:72px;
+        text-align:center;
+        background-color: red;
+        color:white;
+        display:none;
+     }
+     @media only screen and (max-width:300px){            /*This means agra tum kam se kam 0 aur max to max 300px width 
+                                            hogi toh iss meadia ke ander jo bhi likha hai voh apply ho jaega*/
+        #box1{
+            display: block;
+            background-color: cyan;
+        }
+     }
+
+     @media only screen and (min-width:300px) and (max-width:500px){
+        #box2{
+            display:block;
+            background-color: blueviolet;
+        }
+     }
+
+     @media only screen and (min-width:500px) and (max-width:800px){
+        #box3{
+            display:block;
+            background-color: yellow;
+            color:black;
+        }
+     }
+
+     @media only screen and (min-width:800px){
+        #box4{
+            display:block;
+            background-color:green;
+        }
+     }
+     /* There are different types of media such as print, screen, braille etc... but if we don't want that our destop 
+     to support these media types then we write in our media query only screen means we only want to support the
+     screen mwedia types only */
+    </style>
+</head>
+<body>
+    <div class="box" id="box1">Mai ek iphone hoon</div>
+    <div class="box" id="box2">Mai ek tablet hoon</div>
+    <div class="box" id="box3">Mai ek computer hoon</div>
+    <div class="box" id="box4">Mai ek widescreen computer hoon</div>  
+</body>
+</html>

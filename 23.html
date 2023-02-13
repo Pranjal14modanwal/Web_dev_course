@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation</title>
+    <style>
+        .navbar{
+            background-color: black;
+            border-radius:7px;
+        }
+        .navbar ul{
+            overflow:auto;  /*overflow auto karne ki wajha se background firse show hone lagega kyuki humne 
+                               navbar ko target kar ke yh propety dali hai*/
+        }
+        .navbar li{
+            float:left;       /*so that it list show in a line in a navigation bar but not like a list*/
+            list-style:none;  /*bullets nhi show honge */
+            /*now we will se that there will be no backgrounf colour now because of using float and list-style 
+             because yh apne parent m se overflow ho chuka hai*/
+             margin:13px 20px;
+             /* padding-top:3px dene se content neeche aa jaega */
+        }
+
+        .navbar li a{
+            padding:3px 3px;
+            text-decoration:none;     /*iski wajha se jo link ke neeche underline aati hai voh haat jaegi*/
+            color:White;
+        }
+
+        .navbar li a:hover{
+            color: lightblue;
+        }
+
+        .search{
+            float:right;
+            color:white;
+            padding:12px  75px;
+        }
+
+        .navbar input{
+            border: 2px solid black;
+            border-radius: 14px;
+            padding: 3px 17px;
+            width: 129px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+                <div class="search">
+                      <input type="text"  name="search"  id="search" placeholder="search this website">
+                </div>
+            </ul>
+        </nav>
+    </header>
+</body>
+</html>

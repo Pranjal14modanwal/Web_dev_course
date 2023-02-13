@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Fonts</title>
+    <!-- <a href=" https://fonts.google.com/specimen/Rubik+Marker+Hatch#styles">  check how to import font from google in vs code -->
+    <style>
+        p{
+             font-family: 'Courier New', Courier, monospace;
+                          /*'ubantu''Franklin Gothic Medium','Arial Narrow', Arial, sans-serial;
+                          this is font by harry in tutorial but there is some error in mycode hence it doesn't 
+                          execute see that how to paste a stylesheet here of that font*/
+            font-size:33px;  /* 1/96th of an inch*/
+            line-height:1.3em;   /*agar font ke upar koi font hai toh uske neeche ki spacing
+                                    em hota hai parent ke font ka kitne gunha jo ki apke parent 
+                                    ke fontsize ka multiply hota hai*/                        
+        }  
+    
+        span{
+             font-weight:bold; 
+             font-style:italic;
+        }
+        
+        /* websaved fonts are those fonts jo ki operating system ke saath preinstalled aate hai
+         here we can use cursive font because it is web saved font
+         
+         web fonts are those fonts which are not web saved and we cannot use it 
+         and if we wnwt to use it we have to import it here
+
+         we can stack the font example 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+         if system doesnot get 'Franklin Gothic Medium' then it will search for 'Arial Narrow' and so on...
+         
+         CSS Font Stack is a good website which have list of wedsaved font
+         we can import webfont from google fonts (go there select the font which youwant and click on add copy
+         the stylesheet from there and paste it at your vscode*/
+    </style>
+</head>
+<body>
+    <h2>CSS Fonts</h2>
+    <p>Lets play with <span>fonts</span>. It is very exciting</p>
+</body>
+</html>

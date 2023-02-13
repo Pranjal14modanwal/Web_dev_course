@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Functions</title>
+</head>
+<body>
+    <div clas="container">
+        This is arrow function tutorial
+    </div>
+    <script>
+        function greet() {
+            console.log('Good morning');
+        }
+
+        //1. Arrow functions (shortcut to write the above sentence)
+        // greet = ()=>{
+        //     console.log('good morning')
+        // }
+        
+        //2. Another shortcut for writing greet function
+        // let greet = () => console.log('Good morning');
+
+        greet();
+        setTimeout(() => {
+            console.log("We are inside settimeout");
+        },3000);
+
+
+        //  let sum = (a, b)=>{
+        //      return a+b;
+        //  };
+
+
+        // This can further be written in much simpler form
+        let sum2 = (a, b) => a+b;
+        let half = a => a/2;
+
+        let obj1={
+            greeting: "Good Morning",
+            names: ["Harry", "Rohan", "SkillF", "Djkhjvgc"],
+            speak(){
+                this.names.forEach((student)=>{
+                    console.log(this.greeting + "kukdoo koo " + student);     //yh wala this iska apna this hai yh wala this
+                                                                              // mere bahar wale object ko point karega
+
+        // agar maine ek function use kar liya hota toh function greet ki jagha undefined show hota kyuki yh jo function h
+        // by default yh jo this hai yh this ko bhar ja ke nhi dhoonde ga andar hi dhoondega aur undefine show karega  
+        // this.name.forEach(function s (student)=>{
+            // console.log(this.greeting + "kukdoo koo" + student);   
+        // });   
+        // LEXICAL THIS ka matlab hai kisi bhi object ke andar ek function banyeaur uske ander arrow function use karte ho 
+        // toh woh parent ka this hota hai aur agar arrow function use nhi hota hai toh uss function ka apna this hota hai   
+                });
+            }
+        }
+        obj1.speak();
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

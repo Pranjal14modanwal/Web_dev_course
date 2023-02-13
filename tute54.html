@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interaction using alert,confire and prompt</title>
+</head>
+<body>
+    <div class="container">
+     This is a page
+    </div>
+    <script>
+        // 1.) ALERT
+        // Alert in in-browser JavaScript  [Does not retuen anything (ok hi karna padega)]
+        // let a = alert("This is a message");
+        
+        // 2.) PROMPT
+        // how to ask question from user
+        // let name = prompt("What is your name?" , "Guest");   /* combination of message and default value */
+         /* if we won't give guest or message then then also it will run kabhi kabhi inernet explorer mein 
+            humesha default supply karne ki jarrorat padti hai so it is a good practice to put "" instead of 
+            deafult value */
+        // console.log(name);    /*name variable mein jo bhi apne fill kiya woh yaha save ho jaega*/
+  
+        // 3.) CONFIRM 
+        // double check karne ke liye hum log confirm ka use karte hai
+        // let deletepost = confirm("do you really want to delete the post");
+
+        // if(deletepost){
+        //     console.log("Your poat has been deleted succesfully");
+        // }
+        // else{
+        //     console.log("Your post has not deleted successfully");
+        // }
+        // console.log(deletepost);
+
+        // let deletepost = confirm("do you really want to delete the post");
+
+
+// QUICK QUIZ
+ let age = prompt ("Enter your age", "")
+    if(age>=18){
+    console.log("You are allowed inside the club");
+}
+else{
+    console.log("You are not allowed inside the club");
+}
+console.log(age);
+
+    </script>
+</body>
+</html>
